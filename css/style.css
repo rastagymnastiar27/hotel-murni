@@ -1,0 +1,622 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Mafins', sans-serif, 'Rota', 'Sora';
+}
+
+@font-face {
+    font-family: 'Mafins'; /* Nama kustom untuk font */
+    src: url('/assets/font/mafins/Mafins.otf') format('opentype'); /* Path ke file .otf */
+    font-weight: normal; /* Sesuaikan berat font (normal/bold, dll.) */
+    font-style: normal; /* Sesuaikan gaya font (normal/italic, dll.) */
+}
+
+/* Variables */
+:root {
+    --bg-color: #FAEDCD;
+    --main-color: #BC6C25;
+    --text-color: #1A3636;
+    --accent-color: #FEFAE0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 160px;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header .logo {
+    max-width: 100%;
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.header .navbar a {
+    font-family: 'Sora';
+    margin-left: 40px;
+    font-size: 24px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+}
+
+/* home Section */
+.home {
+    flex-wrap: wrap;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+/* Image Section */
+.image-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 0px;
+    padding-top: 40px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* home Text Section */
+.home-text {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    color: var(--accent-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-text h1 {
+    font-size: 55px;
+    padding-top: 250px;
+    letter-spacing: 5px;
+    line-height: 1.2;
+    font-weight: 0;
+}
+
+.home-text p {
+    font-family: 'Rota';
+    font-weight: light;
+    padding-top: 30px;
+    font-size: 35px;
+    margin-top: 10px;
+    font-weight: 0;
+    letter-spacing: 0;
+}
+
+/* Booking Form */
+.booking-form {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(250, 237, 205, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-left: 7px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+input[type="date"], #guests {
+    background: transparent;
+    padding: 8px;
+    width: 120px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+
+.guest-input {
+    display: flex;
+    align-items: center;
+}
+
+.guest-input button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #A56532;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#guests {
+    width: 40px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.submit-btn {
+    background-color: #A56532;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Room Section */
+.room-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+.room-images {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 0px;
+    padding-top: 40px;
+}
+
+.large-image {
+    display: flex;
+    max-width: 61%;
+    width: 100%;
+    flex: 2;
+    position: relative;
+}
+
+.large-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.room-title {
+    position: absolute;
+    bottom: 30px;
+    left: 300px;
+    font-size: 34px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.small-images {
+    display: flex;
+    flex-direction:row;
+    gap: 20px;
+    max-width: fit-content;
+}
+
+.small-images img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Amenities Section */
+.amenities {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    z-index: 1000;
+}
+
+.amenity-item {
+    flex: 1;
+    text-align: center;
+    background-color: var(--accent-color);
+    padding: 80px 20px;
+}
+
+.amenity-item i {
+    font-size: 5em;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+
+.amenity-item h3 {
+    font-size: 50px;
+    margin-bottom: 100px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.amenity-item p {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 130px;
+    line-height: 1.6;
+    color: var(--main-color);
+}
+
+/* Highlighted AC section */
+.amenity-item.highlighted {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+.amenity-item.highlighted i,
+.amenity-item.highlighted h3,
+.amenity-item.highlighted p {
+    color: #FFF;
+}
+
+.amenity-item:hover {
+    transform: translateY(-50px); /* Subtle hover effect */
+}
+
+/* Discounts Section */
+.discounts {
+    display: flex;
+    font-family: sans-serif;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+.discount-item {
+    flex: 1;
+    background-color: #fdf6e3; /* off-white background */
+    text-align: left; /* align text to the left */
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discount-item h3 {
+    padding-left: 30px;
+    font-family: sans-serif;
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #A65B29; /* brownish color */
+    margin: 0; /* Remove margin */
+    flex: 0 0 30%; /* Takes 30% of the width */
+    text-align: left; /* Align to left */
+}
+
+.discount-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px; /* Padding for spacing */
+}
+
+.discount-content p {
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #A65B29;
+    margin: 0; /* Remove margin */
+}
+
+.discount-content span {
+    font-family: sans-serif;
+    font-size: 1.1em;
+    color: #7b5330; /* lighter brown color */
+    margin-top: 5px;
+}
+
+/* For rounded corners and maintaining width */
+.discount-item {
+    transition: transform 0.3s ease;
+}
+
+.discount-item:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+/*About Section*/
+.about {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: max-content;
+    background-color: var(--bg-color);
+}
+
+.about-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-image h2 {
+    position: absolute;
+    font-size: 5rem; /* Adjust font size as needed */
+    color: var(--bg-color); /* Matches the text color */
+    font-family: 'Mafins'; /* Ensure the font family matches the style */
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    display: flex;
+    justify-content: center;
+    padding: 180px 0;
+    background-color: var(--bg-color); /* Soft background color to match the design */
+}
+
+.testimonial-container {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    background-color: var(--accent-color); /* Light background color for the container */
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    position: relative; /* Allows floating effect of the card */
+}
+
+.testimonial-card {
+    position: absolute;
+    top: -100px;
+    left: 300px;
+    align-items: center;
+    right: 20px;
+    max-width: 380px;
+    background-color: var(--accent-color);
+    padding: 70px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(188, 108, 37, 1);
+    text-align: center;
+    z-index: 10; /* Ensures the card appears above the background */
+}
+
+.testimonial-card h1 {
+    font-size: 3rem;
+    color: #b8702d; /* Matching color */
+    font-family: 'Mafins'; /* Font resembling the style */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.testimonial-card p {
+    font-family: serif;
+    font-size: 1rem;
+    color: #b8702d;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.stats {
+    display: flex;
+    font-family: serif;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stats h2 {
+    font-family: serif;
+    font-size: 2rem;
+    color: #b8702d;
+    margin: 0;
+}
+
+.stats p {
+    font-family: serif;
+    font-size: 0.9rem;
+    color: #b8702d;
+    margin: 5px 0 0;
+}
+
+.testimonial-review {
+    flex: 1;
+    margin-left: 700px; /* Offset for the floating card */
+    padding: 20px;
+    text-align: left;
+    color: #666;
+}
+
+.testimonial-review h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: serif;
+}
+
+.testimonial-review p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    font-family: serif;
+}
+
+.stars span {
+    font-size: 1.3rem;
+    color: #f4b400;
+    letter-spacing: 2px;
+}
+
+
+/* Footer Section */
+footer {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px ;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px;
+    margin-bottom: 20px;
+}
+
+.footer-left {
+    width: 40%;
+    padding-left: 200px;
+    text-align: center;
+}
+
+.footer-left a {
+    font-family: 'Sora';
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+}
+
+.footer-left h3 {
+    font-family: 'Mafins';
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.footer-center h4 {
+    font-family: 'Sora';
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+.footer-center a {
+    font-family: 'Sora';
+    list-style-type: none;
+    font-size: 16px;
+    line-height: 2.5;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 100;
+}
+
+.footer-right {
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+.footer-right h4 {
+    font-size: 18px;
+    font-family: 'Sora';
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-right span {
+    font-family: 'Sora';
+    line-height: 2.2;
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    line-height: 2.5;
+}
+
+.footer-right a {
+    color: white;
+}
+
+
+.footer-right span:hover {
+    color: black;
+}
+
+.footer-center a:hover {
+    color: black;
+}
+
+.footer-left a:hover {
+    color: black;
+}
+
+.footer-bottom-wrapper {
+    display: flex;
+    justify-content:center;
+    margin-top: 50px;
+}
+
+.footer-line {
+    width: 60%; /* Half-width line */
+    border-top: 1px solid #e6e6e6;
+    margin-left: 150px;
+}
+
+.footer-bottom {
+    margin-top: -8px;
+    font-family: 'Sora';
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #e6e6e6;
+    flex-shrink: 0;
+}
+
+.footer-bottom span {
+    font-weight: bold;
+}
+
+
