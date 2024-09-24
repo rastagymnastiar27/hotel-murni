@@ -7,7 +7,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Mafins', sans-serif, 'Rota', 'Sora';
+    font-family: 'Arial', 'Mafins', sans-serif, 'Rota', 'Sora';
 }
 
 @font-face {
@@ -125,68 +125,89 @@ body {
 }
 
 /* Booking Form */
-.booking-form {
-    position: absolute;
-    bottom: -40px;
+.form-container {
+    position:relative;
+    align-items: center;
+    bottom: 50px;
+    width: fit-content;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(250, 237, 205, 0.5);
-    backdrop-filter: blur(10px);
-    padding: 20px 40px;
-    border-radius: 10px;
+    background-color: rgba(254, 250, 224, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 20px 10px;
+    border-radius: 30px;
+    border-width: 0.5px;
     display: flex;
-    gap: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+    box-shadow: 0 4px 10px rgba(188, 108, 37, 1);
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
+.form-group {
+    margin-right: -15px;
+    position: relative;
 }
-
-.input-group label {
-    margin-left: 7px;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-    font-family: 'Arial', sans-serif;
+.form-group:last-child {
+    margin-right: 0;
 }
-
-input[type="date"], #guests {
+label {
+    display: block;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Arial';
+}
+input {
+    padding: 5px 0px;
+    font-size: 16px;
     background: transparent;
-    padding: 8px;
     width: 120px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    font-weight: 100;
+    font-family: 'Arial';
 }
 
-.guest-input {
+button {
+    background-color: transparent;
+    color: var(--main-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 0 0px;
+}
+
+.vertical-line {
+    height: 100px;
+    width: 1px;
+    background-color: var(--main-color);
+    margin: 0 20px;
+}
+.submit-btn {
+    background-color: #b16e3d;
+    color: white;
+    padding: 40px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
     display: flex;
     align-items: center;
 }
-
-.guest-input button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #A56532;
-    cursor: pointer;
-    font-size: 16px;
+.submit-btn svg {
+    margin-left: 8px;
 }
 
-#guests {
-    width: 40px;
-    text-align: center;
-    margin: 0 5px;
+#submitA {
+    background-color: var(--main-color);
 }
 
-.submit-btn {
-    background-color: #A56532;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+.arrow-down {
+    position: absolute;
+    right: -0px;
+    top: 50px;
+    color: var(--main-color);
 }
 
 /* Room Section */
@@ -194,7 +215,7 @@ input[type="date"], #guests {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
+    padding: 50px;
 }
 
 .room-images {
@@ -206,7 +227,7 @@ input[type="date"], #guests {
     border-radius: 20px;
     overflow: hidden;
     padding-bottom: 0px;
-    padding-top: 40px;
+    padding-top: 0px;
 }
 
 .large-image {
@@ -619,4 +640,209 @@ footer {
     font-weight: bold;
 }
 
+.footer-bottom-wrapper2 {
+    display: flex;
+    justify-content:center;
+    margin-top: 0px;
+}
 
+.footer-line2 {
+    width: 60%; /* Half-width line */
+    border-top: 1px solid #e6e6e6;
+    margin-left: 165px;
+    margin-top: 20px;
+}
+
+.footer-bottom2 {
+    margin-top: 10px;
+    font-family: 'Sora';
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #e6e6e6;
+    flex-shrink: 0;
+}
+
+.footer-bottom2 span {
+    font-weight: bold;
+}
+
+/* Responsive CSS */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .navbar a {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .home-text h1 {
+        font-size: 30px;
+        padding-top: 150px;
+    }
+
+    .home-text p {
+        font-size: 18px;
+    }
+
+    .form-container {
+        width: 90%;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .room-section {
+        padding: 20px;
+    }
+
+    .room-images, .small-images {
+        flex-direction: column;
+    }
+
+    .discount-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .discount-item h3 {
+        font-size: 2em;
+    }
+
+    .discount-content p {
+        font-size: 1.2em;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .footer-line, .footer-line2 {
+        width: 100%;
+    }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .navbar a {
+        font-size: 20px;
+        margin-left: 25px;
+    }
+
+    .home-text h1 {
+        font-size: 40px;
+    }
+
+    .home-text p {
+        font-size: 24px;
+    }
+
+    .form-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .room-section {
+        padding: 30px;
+    }
+
+    .room-images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .small-images {
+        flex-direction: column;
+    }
+
+    .discount-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer {
+        padding: 40px;
+    }
+
+    .footer-container {
+        padding: 50px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+    .header {
+        padding: 20px 50px;
+    }
+
+    .header .navbar a {
+        font-size: 22px;
+    }
+
+    .home-text h1 {
+        font-size: 48px;
+    }
+
+    .home-text p {
+        font-size: 28px;
+    }
+
+    .form-container {
+        width: 70%;
+    }
+
+    .room-section {
+        padding: 40px;
+    }
+
+    .discount-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-container {
+        gap: 30px;
+    }
+
+    footer {
+        padding: 50px;
+    }
+
+    .footer-container {
+        padding: 60px;
+    }
+}

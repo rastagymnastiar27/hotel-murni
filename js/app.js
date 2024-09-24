@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
     // 1. Hover effect for nav links and buttons
     const buttons = document.querySelectorAll('button, .resume-btn');
   
@@ -14,6 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Flatpickr initialization
+    const jakartaNow = getJakartaTime();
+
+    flatpickr("#check-in-date", {
+        dateFormat: "d M",
+        defaultDate: jakartaNow,
+    });
+    flatpickr("#check-out-date", {
+        dateFormat: "d M",
+        defaultDate: new Date(jakartaNow.getTime() + 86400000),
+    });
     
 
     // 2. Smooth scrolling for anchor links
@@ -76,7 +88,57 @@ document.addEventListener("DOMContentLoaded", () => {
   
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
     
-  
-    
-  });
-  
+});  
+
+// Guests counter logic
+let guests = 0;
+function increaseGuests() {
+    guests++;
+    document.getElementById("guest-count").innerText = guests;
+}
+function decreaseGuests() {
+    if (guests > 1) {
+        guests--;
+        document.getElementById("guest-count").innerText = guests;
+    }
+}
+
+function getJakartaTime() {
+    const jakartaTimezone = 'Asia/Jakarta';
+    const date = new Date();
+    return new Date(date.toLocaleString('en-US', { timeZone: jakartaTimezone }));
+}
+
+const submitA = document.querySelector('#submitA')
+
+submitA.addEventListener('click', function() {
+    if (guests >= 1 && guests <= 4){
+        Swal.fire({
+            icon: 'success',
+            title: 'Room Available',
+            text: 'Hi, welcome to Hotel Murni!',
+            timer: 10000,
+        })
+    } else if (guests > 4) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Room Not Available',
+            text: 'Hi, sorry but our room is max for 4 guests!',
+            timer: 10000,
+        })
+    } else if (guests === 0){
+        Swal.fire({
+            icon: 'error',
+            title: 'Room Not Available',
+            text: 'Hi, please input the correct guests number or choose another date!',
+            timer: 10000,
+        })
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Unknown Error',
+            text: 'Hi, please comeback later!',
+            timer: 10000,
+        })
+    }
+})
