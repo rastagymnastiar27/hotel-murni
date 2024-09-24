@@ -44,6 +44,7 @@ body {
 }
 
 .header .logo {
+    font-family: 'Mafins';
     max-width: 100%;
     letter-spacing: 2px;
     font-size: 24px;
@@ -666,55 +667,131 @@ footer {
     font-weight: bold;
 }
 
-/* Responsive CSS */
+/* Responsive Adjustments for 768px */
+@media (max-width: 768px) {
 
-/* Small devices (phones, 600px and down) */
-@media (max-width: 600px) {
+    /* Header */
     .header {
-        padding: 10px;
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 15px 40px;
+        flex-direction: row;
+    }
+    
+    .header .navbar a {
+        margin-left: 20px;
+        font-size: 18px;
     }
 
-    .header .navbar a {
-        font-size: 18px;
-        margin-left: 20px;
+    /* Home Section */
+    .home {
+        height: auto;
+        padding-top: 60px;
     }
 
     .home-text h1 {
-        font-size: 30px;
-        padding-top: 150px;
+        font-size: 34px;
+        padding-top: 50px;
+        margin-top: 120px;
     }
 
     .home-text p {
-        font-size: 18px;
+        font-size: 20px;
+        padding-top: 20px;
     }
 
+    /* Image Section */
+    .image-container {
+        max-width: 100%;
+    }
+
+    /* Booking Form */
     .form-container {
-        width: 90%;
-        flex-direction: column;
-        padding: 10px;
+        position: relative;
+        flex-direction: row;
+        gap: 0px;
+        padding: 15px;
+        width: 80%;
+        bottom: 50px;
+        left: 10%;
+        transform: none;
     }
 
-    .room-section {
+    .form-group {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .vertical-line {
+        display: flex;
+    }
+
+    .submit-btn {
         padding: 20px;
+        height: 100px;
     }
 
-    .room-images, .small-images {
+    /* Room Section */
+    .room-images {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .large-image {
+        max-width: fit-content;
+    }
+
+    .small-images {
+        margin-left: -10px;
+        width: 30%;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .small-images img {
+        width: 45%;
+    }
+
+    .room-title {
+        left: 20px;
+        font-size: 24px;
+    }
+
+    /* Amenities Section */
+    .amenities {
         flex-direction: column;
+        gap: 0;
     }
 
-    .discount-item {
-        flex-direction: column;
-        text-align: center;
+    .amenity-item {
+        padding:10px 10px;
+        font-size: 14px;
     }
 
-    .discount-item h3 {
-        font-size: 2em;
+    .amenity-item i {
+        font-size: 3em;
     }
 
-    .discount-content p {
-        font-size: 1.2em;
+    .amenity-item h3 {
+        font-size: 30px;
+    }
+
+    .amenity-item p {
+        margin-top: -80px;
+        font-size: 16px;
+    }
+
+    .discount-content {
+        width: fit-content;
+    }
+
+    /* Testimonial Section */
+    .testimonial-section {
+        padding: 120px 0;
+
     }
 
     .testimonial-container {
@@ -722,127 +799,53 @@ footer {
         padding: 20px;
     }
 
-    footer {
-        padding: 20px;
-        flex-direction: column;
+    .testimonial-card {
+        max-width: 40%;
+        left: 10px;
+        top: -50px;
+        padding: 40px;
     }
 
-    .footer-container {
-        padding: 30px;
-        flex-direction: column;
+    .testimonial-review {
+        margin-left: 300px;
+        font-family: 12px;
         text-align: center;
     }
 
-    .footer-left, .footer-right {
-        width: 100%;
+    .about {
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        padding: 40px 20px;
+    }
+
+    .footer-left {
         padding-left: 0;
+    }
+
+    .footer-right, .footer-left, .footer-center {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-bottom-wrapper, .footer-bottom-wrapper2 {
+        margin-top: 20px;
     }
 
     .footer-line, .footer-line2 {
         width: 100%;
-    }
-}
-
-/* Medium devices (tablets, 768px and down) */
-@media (max-width: 768px) {
-    .header {
-        padding: 15px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header .navbar a {
-        font-size: 20px;
-        margin-left: 25px;
-    }
-
-    .home-text h1 {
-        font-size: 40px;
-    }
-
-    .home-text p {
-        font-size: 24px;
-    }
-
-    .form-container {
-        width: 80%;
-        padding: 15px;
-    }
-
-    .room-section {
-        padding: 30px;
-    }
-
-    .room-images {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .small-images {
-        flex-direction: column;
-    }
-
-    .discount-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .testimonial-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    footer {
-        padding: 40px;
-    }
-
-    .footer-container {
-        padding: 50px;
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* Large devices (desktops, 992px and down) */
-@media (max-width: 992px) {
-    .header {
-        padding: 20px 50px;
-    }
-
-    .header .navbar a {
-        font-size: 22px;
-    }
-
-    .home-text h1 {
-        font-size: 48px;
-    }
-
-    .home-text p {
-        font-size: 28px;
-    }
-
-    .form-container {
-        width: 70%;
-    }
-
-    .room-section {
-        padding: 40px;
-    }
-
-    .discount-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .testimonial-container {
-        gap: 30px;
-    }
-
-    footer {
-        padding: 50px;
-    }
-
-    .footer-container {
-        padding: 60px;
+        margin-left: 0;
     }
 }
