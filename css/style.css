@@ -849,3 +849,281 @@ footer {
         margin-left: 0;
     }
 }
+
+/* Responsive Adjustments for 576px */
+@media (max-width: 576px) {
+
+    /* Header */
+    .header {
+        padding: 15px 20px; /* Adjusted padding for better spacing */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .header .navbar a {
+        margin-left: 10px; /* Reduced spacing */
+        font-size: 18px;
+        transition: color 0.3s; /* Smooth color transition */
+    }
+
+    /* Home Section */
+    .home {
+        height: auto; /* Allow flexibility */
+        padding-top: 60px; /* Consistent top padding */
+    }
+
+    .home-text h1 {
+        font-size: 24px; /* Smaller font size for smaller screens */
+        padding-top: 90px; /* Adjusted for balance */
+        margin-top: 80px; /* Reduced margin for spacing */
+    }
+
+    .home-text p {
+        font-size: 18px; /* Smaller paragraph size */
+        padding-top: 15px; /* Adjusted padding */
+    }
+
+    /* Image Section */
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px; /* Adjusted for a better top space */
+    }
+
+    .image-container img {
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Booking Form */
+    .form-container {
+        position: relative;
+        display: flex;
+        flex-direction: column; /* Stack form elements vertically */
+        align-items: stretch; /* Stretch elements to fill container width */
+        width: 75%; /* Increased width to 75% */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(254, 250, 224, 0.5);
+        backdrop-filter: blur(5px);
+        padding: 20px 10px; /* Increased padding for better spacing */
+        border-radius: 15px; /* Keep border radius */
+        border-width: 0.5px;
+        box-shadow: 0 2px 5px rgba(188, 108, 37, 0.9); /* Keep shadow size */
+        gap: 10px; /* Increased gap between form fields */
+        margin-top: 20px; /* Add margin above section */
+    }
+    
+    .form-group {
+        width: 100%; /* Full width for form fields */
+        margin-right: 0; /* Remove negative margin */
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px; /* Increased margin for mobile */
+        color: #000000;
+        font-size: 11px; /* Increased font size */
+        font-weight: 500; /* Slightly bolder for legibility */
+        font-family: 'Arial', sans-serif; /* Ensure fallback font for mobile */
+    }
+    
+    input {
+        width: 100%; /* Full width input fields */
+        padding: 8px; /* Increased padding */
+        font-size: 10px; /* Increased font size */
+        background: transparent;
+        cursor: pointer;
+        font-weight: 400;
+        border: 1px solid var(--main-color); /* Add border for clarity */
+        border-radius: 3px; /* Slight rounding for inputs */
+        font-family: 'Arial', sans-serif;
+    }
+    
+    button {
+        background-color: transparent;
+        color: var(--main-color);
+        padding: 5px 10px; /* Keep padding */
+        cursor: pointer;
+        font-size: 16px; /* Adjusted font size */
+        margin: 0;
+    }
+    
+    .vertical-line {
+        display: none; /* Hide the vertical line for mobile layout */
+    }
+    
+    .submit-btn {
+        background-color: #b16e3d;
+        color: white;
+        padding: 15px 14px; /* Reduced padding */
+        border-radius: 5px;
+        font-size: 8px; /* Smaller font size */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content; /* Fit content width */
+        height: auto;
+        text-align: center; /* Center text */
+        margin-top: -50px;
+        margin-left: auto; /* Align button to the right */
+    }
+    
+    .submit-btn svg {
+        margin-left: 4px;
+    }
+    
+    .arrow-down {
+        position: absolute;
+        right: 10px;
+        top: 30px; /* Adjusted position for better alignment */
+        color: var(--main-color);
+        font-size: 12px; /* Smaller size for icon */
+    }
+    
+
+
+    /* Room Section */
+    .room-images {
+        flex-direction: row; /* Stack images vertically */
+        gap: 15px; /* Space between images */
+        padding: 0 10px; /* Add padding for layout */
+    }
+
+    .large-image {
+        width: 100%; /* Full width on mobile */
+        object-fit: cover; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between large and small images */
+    }
+
+    .small-images {
+        object-fit: cover; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between large and small images */
+        display: flex;
+        gap: 10px; /* Increased gap for clarity */
+    }
+
+    .small-images img {
+        width: 100%; /* Full width small images */
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px; /* Rounded corners for a cleaner look */
+    }
+
+    .room-title {
+        left: 10px; /* Adjusted for smaller screens */
+        font-size: 20px; /* Smaller title size */
+    }
+
+    /* Amenities Section */
+    .amenities {
+        flex-direction: column; /* Stack items */
+        margin: 20px auto; /* Center align */
+        gap: 0; /* Increase gap for readability */
+    }
+
+    .amenity-item {
+        padding: 20px; /* Increased padding */
+        font-size: 16px; /* Increased font size */
+    }
+
+    .amenity-item i {
+        font-size: 4em; /* Larger icon for emphasis */
+    }
+
+    .amenity-item h3 {
+        font-size: 24px; /* Smaller heading size */
+    }
+
+    .amenity-item p {
+        margin-top: -80px; /* Adjusted margin */
+        font-size: 14px; /* Smaller text size */
+    }
+
+    /* Discounts Section */
+    .discounts {
+        flex-direction: column; /* Stack discounts */
+        padding: 20px; /* Added padding for comfort */
+    }
+
+    .discount-item {
+        margin-bottom: 20px; /* Space between items */
+        flex-direction: column; /* Stack content */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    .discount-item h3 {
+        padding-left: 20px;
+        font-size: 2.5em; /* Smaller title size */
+    }
+
+    .about-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /* About Section */
+    .about-image h2 {
+        font-size: 3rem; /* Smaller font size for heading */
+        padding: 5px; /* Reduced padding */
+    }
+
+    /* Testimonial Section */
+    .testimonial-section {
+        padding: 80px 0; /* Adjusted padding */
+    }
+
+    .testimonial-card {
+        max-width: 50%; /* Full width card */
+        height: 100%;
+        left: 0; /* Reset left offset */
+        top: 0; /* Reduced floating effect */
+        padding: 40px 20px; /* Responsive padding */
+    }
+
+    .testimonial-review {
+        left: 0; /* Reset left offset */
+        top: -20px; /* Reduced floating effect */
+        padding: 40px 20px; /* Responsive padding */
+        text-align: center; /* Centered text */
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 10px; /* Reduced padding */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack footer items */
+        padding: 20px 10px; /* Adjusted padding */
+        text-align: center; /* Centered text */
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Vertical spacing */
+    }
+
+    .footer-bottom-wrapper, .footer-bottom-wrapper2 {
+        margin-top: 10px; /* Reduced spacing */
+    }
+
+    .footer-line, .footer-line2 {
+        width: 100%; /* Full width lines */
+        margin-left: 0; /* Reset left margin */
+    }
+}
