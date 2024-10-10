@@ -851,7 +851,7 @@ footer {
 }
 
 /* Responsive Adjustments for 576px */
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
 
     /* Header */
     .header {
@@ -1125,5 +1125,303 @@ footer {
     .footer-line, .footer-line2 {
         width: 100%; /* Full width lines */
         margin-left: 0; /* Reset left margin */
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 414px) {
+
+
+    /* Header */
+    .header {
+        padding: 10px 20px; /* Less padding for smaller screens */
+        flex-direction: column; /* Stack logo and navbar vertically */
+        align-items: center; /* Align items to start */
+    }
+
+    .header .logo {
+        font-size: 20px; /* Smaller logo size */
+        text-align: center; /* Center the logo */
+        margin-bottom: 10px;
+    }
+
+    .header .navbar a {
+        margin-left: 0; /* Remove left margin for navbar links */
+        margin-top: 20px; /* Add top margin for vertical spacing */
+        font-size: 18px; /* Smaller font size */
+    }
+
+    /* Home Section */
+    .home {
+        padding-top: 100px; /* Adjust padding to fit the header */
+        height: auto; /* Allow height to adjust based on content */
+        text-align: center; /* Center content */
+    }
+
+    /* Home Text Section */
+    .home-text h1 {
+        font-size: 18px; /* Smaller font size for heading */
+        padding-top: 80px; /* Less padding */
+    }
+
+    .home-text p {
+        font-size: 10px; /* Smaller font size for paragraph */
+        padding-top: 10px; /* Less padding */
+    }
+
+    /* Image Container */
+    .image-container {
+        padding-top: 10px; /* Reduce top padding */
+    }
+
+    /* Booking Form */
+    .form-container {
+        width: 90%; /* Increase width for mobile */
+        left: 50%; /* Center align */
+        transform: translateX(-50%); /* Adjust centering */
+        padding: 10px; /* Add padding for better touch targets */
+        bottom: 0;
+    }
+
+    .form-group {
+        margin-right: 0; /* Reset margin for small screens */
+        margin-bottom: 5px; /* Add space between form groups */
+    }
+
+    label {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    input {
+        width: 100%; /* Full width inputs for better UX */
+        font-size: 14px; /* Smaller input font size */
+    }
+
+    button {
+        padding: 8px 12px; /* Adjust button padding */
+        font-size: 16px; /* Smaller button font size */
+    }
+
+    .vertical-line {
+        display: none; /* Hide vertical line on smaller screens */
+    }
+
+    .submit-btn {
+        background-color: #b16e3d;
+        color: white;
+        padding: 13px 12px; /* Reduced padding */
+        border-radius: 5px;
+        font-size: 8px; /* Smaller font size */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content; /* Fit content width */
+        height: auto;
+        text-align: center; /* Center text */
+        margin-top: -60px;
+        margin-left: auto; /* Align button to the right */
+    }
+
+    .submit-btn svg {
+        margin-left: 4px;
+    }
+
+    .arrow-down {
+        position: absolute;
+        right: 10px;
+        top: 40px; /* Adjusted position for better alignment */
+        color: var(--main-color);
+        font-size: 12px; /* Smaller size for icon */
+    }
+    
+    /* Room Section */
+    .room-images {
+        width: 100%;
+        flex-direction: row;
+        padding: 10px auto;
+        gap: 10px; /* Reduce gap */
+    }
+    .large-image {
+        width: 1000%; /* Full width on mobile */
+        object-fit: cover; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between large and small images */
+    }
+
+    .small-images {
+        object-fit: cover; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between large and small images */
+        display: flex;
+        gap: 10px; /* Increased gap for clarity */
+    }
+
+    .small-images img {
+        width: 70%; /* Full width small images */
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px; /* Rounded corners for a cleaner look */
+    }
+
+    .room-title {
+        left: 10px; /* Adjusted for smaller screens */
+        font-size: 20px; /* Smaller title size */
+    }
+
+     /* Amenities Section */
+     .amenities {
+        flex-direction: column; /* Stack amenities vertically */
+        align-items: center; /* Center align */
+        padding: 10px auto; /* Adjust padding */
+    }
+
+    .amenity-item {
+        padding: 20px; /* Adjust padding */
+        width: 100%; /* Increase width */
+    }
+
+    .amenity-item i {
+        font-size: 3em; /* Larger icon for emphasis */
+    }
+
+    .amenity-item h3 {
+        font-size: 18px; /* Smaller heading size */
+    }
+
+    .amenity-item p {
+        margin-top: -80px; /* Adjusted margin */
+        font-size: 10px; /* Smaller text size */
+    }
+
+    /* Discounts Section */
+    .discounts {
+        flex-direction: column; /* Stack discounts vertically */
+        align-items: center; /* Center align */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .discount-item {
+        width: 70%; /* Increase width */
+        margin-bottom: 10px; /* Space between items */
+    }
+
+    .discount-item h3 {
+        margin-top: -20px;
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .discount-content p {
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    .discount-item span {
+        margin-bottom: -20px;
+        font-size: 10px;
+    }
+
+    /* About Section */
+    .about-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-image h2 {
+        font-size: 3rem; /* Smaller font size */
+    }
+
+    /* Testimonial Section */
+    .testimonial-section {
+        padding: 40px 0; /* Adjust padding */
+    }
+
+    .testimonial-card {
+        max-width: 50%;
+        height: 100%;
+        left: 10px;
+        padding: 20px;
+        top: 0; /* Reset top position */
+    }
+
+
+    .testimonial-card h1,
+    .testimonial-card h2 {
+        font-size: 25px;
+    }
+
+    .testimonial-card p {
+        font-size: 17px;
+    }
+
+    .testimonial-review {
+        top: 0;
+        padding: 20px 10px;
+        width: 45%;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    .testimonial-review h3 {
+
+        font-size: 22px;
+    }
+
+    .testimonial-review p {
+        font-size: 14px;
+    }
+
+
+    /* Footer Section */
+    /* Footer */
+    footer {
+        padding: 20px 10px; /* Reduced padding */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack footer items */
+        padding: 20px 10px; /* Adjusted padding */
+        text-align: center; /* Centered text */
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Vertical spacing */
+    }
+
+    .footer-bottom-wrapper, .footer-bottom-wrapper2 {
+        margin-top: 10px; /* Reduced spacing */
+    }
+
+    .footer-line, .footer-line2 {
+        width: 100%; /* Full width lines */
+        margin-left: 0; /* Reset left margin */
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%; /* Full width for footer items */
+        text-align: center; /* Center align text */
+        margin-bottom: 10px; /* Space between sections */
+    }
+
+    .footer-left h3 {
+        font-size: 26px; /* Smaller font size */
+    }
+
+    .footer-right h4,
+    .footer-center h4 {
+        font-size: 20px;
+    }
+
+    .footer-center a,
+    .footer-left a {
+        font-size: 14px;
+        line-height: 1.5; /* Adjust line height for better readability */
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem; /* Smaller font size */
     }
 }
