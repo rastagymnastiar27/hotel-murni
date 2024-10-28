@@ -1,4 +1,4 @@
-#Hotel Murni Landing Page
+# Hotel Murni Landing Page
 
 a simple website landing page of hotel murni, using html, css, and javascript.
 
